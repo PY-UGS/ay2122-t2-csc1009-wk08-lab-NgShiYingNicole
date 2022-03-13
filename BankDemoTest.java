@@ -1,5 +1,3 @@
-package Bank;
-
 import java.util.Scanner;
 
 public class BankDemoTest{
@@ -17,12 +15,12 @@ public class BankDemoTest{
 			System.out.println("Enter withdrawal amount: ");
 			double withdrawAmount = input.nextDouble();
 			account.withdraw(withdrawAmount);
-			//c. If $yy < $xx, print out the account balance ìThe balance after withdraw is: $ î. 
+			//c. If $yy < $xx, print out the account balance ‚ÄúThe balance after withdraw is: $ ‚Äù. 
 			System.out.println("The balance after withdraw is: $ "+ account.getBalance());
         }
         catch ( Exception e)
         {
-        	//d. If $yy > $xx, print the user-defined exception and short amount ìSorry, but your account is short by: $ î.
+        	//d. If $yy > $xx, print the user-defined exception and short amount ‚ÄúSorry, but your account is short by: $ ‚Äù.
             System.out.println("Sorry, but your account is short by: $ "+e.getMessage());
         }
 	}
