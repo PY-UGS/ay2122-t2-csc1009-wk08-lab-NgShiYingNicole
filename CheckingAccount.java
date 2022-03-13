@@ -12,6 +12,7 @@ public class CheckingAccount{
 		this.accountNo = accountNo;
 		this.balance = balance;
 	}
+	
 	//with methods deposit(), withdraw(), getBalance(), getNumber()
 	public void deposit(double amount) throws Exception{
 		if (amount > 0) {
@@ -22,13 +23,13 @@ public class CheckingAccount{
 	public void withdraw(double amount) throws InsufficientFundsException, Exception{
 		//It throws a user-defined exception InsufficientFundsException if amount to withdraw is higher than the balance.
 		if(amount > this.balance)
-        {
-            throw new InsufficientFundsException(amount-this.balance);
-        }
-        else
-        {
-            this.balance -= amount;
-        }
+		{
+			throw new InsufficientFundsException(amount-this.balance);
+		}
+		else
+		{
+			this.balance -= amount;
+		}
 	}
 	
 	public double getBalance() {
@@ -37,7 +38,5 @@ public class CheckingAccount{
 	
 	public String getNumber() {
 		return accountNo;
-	}
-	
-	
+	}	
 }
