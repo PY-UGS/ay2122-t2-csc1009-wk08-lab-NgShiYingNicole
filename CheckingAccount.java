@@ -1,5 +1,3 @@
-package Bank;
-
 public class CheckingAccount{
 	//create a CheckingAccount class
 	//The class has balance and account number fields. 
