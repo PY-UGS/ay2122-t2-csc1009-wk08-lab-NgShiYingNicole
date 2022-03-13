@@ -1,5 +1,3 @@
-package Bank;
-
 import java.io.*; 
 
 public class InsufficientFundsException extends Exception { 
