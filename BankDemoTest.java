@@ -18,10 +18,10 @@ public class BankDemoTest{
 			//c. If $yy < $xx, print out the account balance “The balance after withdraw is: $ ”. 
 			System.out.println("The balance after withdraw is: $ "+ account.getBalance());
 		}
-		catch ( Exception e)
+		catch ( InsufficientFundsException e)
 		{
 			//d. If $yy > $xx, print the user-defined exception and short amount “Sorry, but your account is short by: $ ”.
-			System.out.println("Sorry, but your account is short by: $ "+e.getMessage());
+			System.out.println("Sorry, but your account is short by: $ "+e.getAmount());
 		}
 	}
 }
