@@ -14,13 +14,17 @@ public class CheckingAccount{
 	}
 	
 	//with methods deposit(), withdraw(), getBalance(), getNumber()
-	public void deposit(double amount){
+	public void deposit(double amount) throws Exception{
 		if (amount > 0) {
 			this.balance += amount;
 		}
+		else {
+			throw new Exception("Amount cannot be equal to or less than $0");
+		}
 	}
 	
-	public void withdraw(double amount) throws InsufficientFundsException{
+	public void withdraw(double amount) throws Exception{
+		if (amount <= 0) throw new Exception("Amount cannot be equal to or less than $0");
 		//It throws a user-defined exception InsufficientFundsException if amount to withdraw is higher than the balance.
 		if(amount > this.balance)
 		{
