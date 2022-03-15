@@ -27,12 +27,12 @@ public class CircleWithException {
 	}
 
 	public static void validationValue(double radius) throws Exception, IllegalArgumentException {
-        if (radius < 0) {
+        if (radius <= 0) {
         	// TODO If the radius is not a positive number, an "IllegalArgumentException" should be thrown
         	throw new IllegalArgumentException("radius is negative");        	
         }
         else if (radius > Math.sqrt(1000.0 / Math.PI)) {
-        	// TODO If the area is bigger than 1000, a general exception ìExceptionî should be thrown
+        	// TODO If the area is bigger than 1000, a general exception ‚ÄúException‚Äù should be thrown
         	throw new Exception("radius with area more than 1000 is not allowed");
         }
     }
