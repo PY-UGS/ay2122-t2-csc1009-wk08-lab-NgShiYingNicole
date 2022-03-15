@@ -23,5 +23,10 @@ public class BankDemoTest{
 			//d. If $yy > $xx, print the user-defined exception and short amount “Sorry, but your account is short by: $ ”.
 			System.out.println("Sorry, but your account is short by: $ "+e.getAmount());
 		}
+		catch ( Exception e)
+        	{
+        		// extra: to check for negative or zero value
+            		System.out.println(e.getMessage());
+        	}
 	}
 }
